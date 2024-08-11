@@ -25,6 +25,7 @@ if st.session_state["uploaded_files"]:
     file_options = [file[0] for file in st.session_state["uploaded_files"]]
     selected_file = st.selectbox("Select a file to view:", file_options)
 
+    # Find the selected file and display its contents
     for file_name, df in st.session_state["uploaded_files"]:
         if file_name == selected_file:
             st.write("Top 5 lines of the selected file:")
